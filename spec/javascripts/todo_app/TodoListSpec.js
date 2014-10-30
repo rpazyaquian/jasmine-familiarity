@@ -18,16 +18,15 @@ describe("TodoList", function() {
   });
 
   it ("lists all its TodoItems", function() {
-    var listItems = ['hello', 'world'];
+    var listItems = ['hello: false', 'world: false'];
     expect(todoList.list()).toEqual(listItems);
   });
 
   it ("adds a new TodoItem to the list", function() {
-    var newTodo = 'take out trash';
-    todoList.addItem({
-      text: newTodo
+    var newTodo = todoList.addItem({
+      text: 'take out trash'
     });
-    expect(todoList.list()).toContain(newTodo);
+    expect(todoList.list()).toContain(newTodo.status());
   });
 
 });
