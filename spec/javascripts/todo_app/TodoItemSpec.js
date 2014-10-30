@@ -1,6 +1,9 @@
 describe("TodoItem", function() {
+  var todoItem;
 
-  var todoItem = new TodoItem({ text: 'pet jet' });
+  beforeEach(function() {
+    todoItem = new TodoItem({ text: 'pet jet' });
+  })
 
   it("has todo text", function() {
     expect(todoItem.text).toEqual('pet jet');
@@ -17,5 +20,13 @@ describe("TodoItem", function() {
   it("renders its own status", function() {
     var expectedStatus = "pet jet: true";
     expect(todoItem.status()).toEqual(expectedStatus);
+  });
+
+  it("is associated with an li element", function() {
+    expect(todoItem.rootElement).toBe('li');
+  });
+
+  it("renders its own HTML string", function() {
+    expect(todoItem.html()).toBe('<li>pet jet: false</li>');
   });
 });

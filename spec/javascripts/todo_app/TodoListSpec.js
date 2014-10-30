@@ -29,4 +29,8 @@ describe("TodoList", function() {
     expect(todoList.list()).toContain(newTodo.status());
   });
 
+  it ("is associated with a ul element", function() {
+    expect(todoList.rootElement).toBe('ul');
+  });
+
 });

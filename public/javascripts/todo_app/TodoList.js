@@ -1,5 +1,6 @@
 var TodoList = function() {
   this.items = [];
+  this.rootElement = 'ul';
 }
 
 TodoList.prototype.addItem = function(params) {

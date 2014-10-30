@@ -1,6 +1,7 @@
 var TodoItem = function(params) {
   this.text = params.text;
   this.completed = false;
+  this.rootElement = 'li';
 }
 
 TodoItem.prototype.toggleCompletion = function() {
