@@ -1,14 +1,17 @@
 describe("TodoItem", function() {
 
-  var todoItem = new TodoItem('pet jet');
+  var todoItem = new TodoItem({ text: 'pet jet' });
+
+  it("has todo text", function() {
+    expect(todoItem.text).toEqual('pet jet');
+  });
 
   it("is not complete when created", function() {
-    expect(todoItem.complete).toBeFalsy();
+    expect(todoItem.completed).toBeFalsy();
   });
 
   it("toggles completion state", function() {
-    todoItem.toggleCompletion();
-    expect(todoItem.complete).toBeTruthy();
+    expect(todoItem.toggleCompletion()).toBeTruthy();
   });
 
   it("renders its own status", function() {
