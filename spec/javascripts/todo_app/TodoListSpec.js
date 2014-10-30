@@ -33,4 +33,8 @@ describe("TodoList", function() {
     expect(todoList.rootElement).toBe('ul');
   });
 
+  it ("renders to the DOM", function() {
+    expect(todoList.render()).toBe();
+  });
+
 });

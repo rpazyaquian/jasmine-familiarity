@@ -14,3 +14,10 @@ TodoList.prototype.list = function() {
     return item.status();
   });
 }
+
+TodoList.prototype.render = function() {
+  var listElement = $('#todo-list');
+  this.items.forEach(function(item){
+    listElement.append(item.html());
+  });
+}

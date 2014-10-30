@@ -12,3 +12,8 @@ TodoItem.prototype.toggleCompletion = function() {
 TodoItem.prototype.status = function() {
   return this.text+": "+this.completed;
 }
+
+TodoItem.prototype.html = function() {
+  var itemElement = $('<li>').text(this.status());
+  return itemElement;
+}

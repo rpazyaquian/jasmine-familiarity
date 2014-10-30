@@ -18,7 +18,7 @@ describe("TodoItem", function() {
   });
 
   it("renders its own status", function() {
-    var expectedStatus = "pet jet: true";
+    var expectedStatus = "pet jet: false";
     expect(todoItem.status()).toEqual(expectedStatus);
   });
 
@@ -26,7 +26,7 @@ describe("TodoItem", function() {
     expect(todoItem.rootElement).toBe('li');
   });
 
-  it("renders its own HTML string", function() {
-    expect(todoItem.html()).toBe('<li>pet jet: false</li>');
+  it("renders its own HTML element", function() {
+    expect(todoItem.html()).toBe();
   });
 });

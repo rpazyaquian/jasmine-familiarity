@@ -1,11 +1,13 @@
 var todoList = new TodoList;
 
-todoList.addItem({
+var helloTodo = todoList.addItem({
   text: 'hello'
 });
 
-todoList.addItem({
+var worldTodo = todoList.addItem({
   text: 'world'
 });
+
+worldTodo.toggleCompletion();
 
 todoList.render();
